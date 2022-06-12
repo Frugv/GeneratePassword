@@ -98,8 +98,6 @@ def generatess():
         quatitysl = int(request.form["Количество маленьких букв"])
         quatityn = int(request.form["Количество чисел"])
         S = quatityn + quatitysl + quatitybl + quatityss
-        print(S)
-        print(length)
         if S != length:
             message = "Вы ввели неверное количество символов,букв и чисел. Проверьте еще раз и повторите попытку!"
             return render_template('FormPass1.html', message=message, form=form)
@@ -173,8 +171,6 @@ def generatewss():
         quatitysl = int(request.form["Количество маленьких букв"])
         quatityn = int(request.form["Количество чисел"])
         S = quatityn + quatitysl + quatitybl
-        print(S)
-        print(length)
         if S != length:
             message = "Вы ввели неверное количество букв и чисел. Проверьте еще раз и повторите попытку!"
             return render_template('FormPass2.html', message=message, form=form)
