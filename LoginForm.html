@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Генерация пароля</h1>
+    <form action="/generation" method="post" novalidate>
+        <p>{{ form.nameSN.label }}<br>
+            <input type = "text" name = "Название соц.сети" required/>
+        </p>
+        <p>{{ form.loginSN.label }}<br>
+            <input type = "text" name = "Логин соц.сети" required/>
+        </p>
+        <p>
+            {{ form.length_password.label }}<br>
+            <input type = "text" name = "Длина пароля" required/>
+        </p>
+        <p>
+            {{"Хотите определить количество спецсимволов, больших и маленьких букв, цифр: "}}
+        </p>
+        <p>
+            <input type="radio" id="Да" name="choice" value="Да"><label for="Да">Да</label>
+            <input type="radio" id="Нет" name="choice" value="Нет"><label for="Нет">Нет</label>
+        </p>
+        <p>
+            {{"Нужны ли в пароли спецсимволы: "}}
+        </p>
+        <p>
+            <input type="radio" id="Да" name="specsimbol" value="Да"><label for="Да">Да</label>
+            <input type="radio" id="Нет" name="specsimbol" value="Нет"><label for="Нет">Нет</label>
+        </p>
+        <p>{{ form.button() }}</p>
+    </form>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Данные для создания пароля</h1>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <form action="/generatewss" method="post" novalidate>
+        <p>{{ form.length_bigletters.label }}<br>
+            <input type = "number" min="0" name = "Количество больших букв" required/>
+        </p>
+        <p>{{ form.length_litletters.label }}<br>
+            <input type = "number" min="0" name = "Количество маленьких букв" required />
+        </p>
+        <p>{{ form.length_number.label }}<br>
+            <input type = "number" min="0" name = "Количество чисел" required/>
+        </p>
+        <p>{{ form.button() }}</p>
+    </form>
+{% endblock %}

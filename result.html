@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <table border="1">
+        <body>
+            <tr>
+                <th>Название соц.сети</th>
+                <th>Логин соц.сети</th>
+                <th>Пароль соц.сети</th>
+            </tr>
+            <tr>
+                <td>{{ list[0] }}</td>
+                <td>{{ list[1] }}</td>
+                <td>{{ list[2] }}</td>
+            </tr>
+        </body>
+    </table>
+{% endblock %}
